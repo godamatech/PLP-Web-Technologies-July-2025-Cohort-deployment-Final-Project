@@ -1,0 +1,63 @@
+/* ---------- Base Styles ---------- */
+/* Ensure footer sticks to the bottom even on short pages */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+    background:#e6f0ff;
+  flex: 1; /* take up all remaining space */
+}
+.footer-text{
+    text-align: center;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; color:#333; background:#fdfdfd; }
+a { text-decoration:none; color:#0066cc; }
+a:hover { text-decoration:underline; }
+header, footer { background:#002147; color:#fff; padding:1rem 0; }
+footer p, header a { color:#fff; }
+
+/* ---------- Navbar ---------- */
+.navbar { display:flex; justify-content:space-between; align-items:center; width:90%; margin:auto; }
+.logo { font-size:1.5rem; font-weight:bold; }
+.nav-links { list-style:none; display:flex; gap:1.5rem; }
+.nav-links li a { color:#fff; font-weight:500; }
+.nav-links li a.active { border-bottom:2px solid #fff; }
+
+.menu-toggle { display:none; background:none; border:none; color:#fff; font-size:2rem; }
+
+/* ---------- Hero Section ---------- */
+.hero { text-align:center; padding:5rem 1rem; background:#e6f0ff; }
+.hero h1 { font-size:2.5rem; margin-bottom:1rem; }
+.btn { display:inline-block; margin-top:1rem; background:#0066cc; color:#fff; padding:0.7rem 1.2rem; border-radius:5px; transition:background 0.3s; }
+.btn:hover { background:#004c99; }
+
+/* ---------- Content Sections ---------- */
+.content { width:90%; margin:2rem auto; }
+.content img { max-width:200px; border-radius:8px; margin:1rem 0; }
+.projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+.projects-grid article { background:#f4f4f4; padding:1rem; border-radius:8px; text-align:center; transition:transform 0.3s; }
+.projects-grid article:hover { transform:translateY(-5px); }
+
+/* ---------- Contact Form ---------- */
+form { display:flex; flex-direction:column; gap:1rem; max-width:500px; margin:auto; }
+label { display:flex; flex-direction:column; font-weight:bold; }
+input, textarea { padding:0.5rem; border:1px solid #ccc; border-radius:4px; }
+.form-message { margin-top:1rem; font-weight:bold; }
+
+/* ---------- Responsive ---------- */
+@media (max-width:768px) {
+  .menu-toggle { display:block; }
+  .nav-links { display:none; flex-direction:column; gap:0; background:#002147; }
+  .nav-links.show { display:flex; }
+}
+  /* .nav-links li { border-top:1px solid #fff; padding:0.5rem 0; text-align:center; }
+  .hero h1 { font-size:2rem; }
+  .content { width:95%; } */
